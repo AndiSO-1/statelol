@@ -1,35 +1,33 @@
 import React from 'react';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
-import './App.css';
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
+// Login
 import Login from "./components/login";
 
-function App() {
-  return (<Router>
-    <div className="App">
-      <nav className="navbar navbar-expand-lg navbar-light fixed-top">
-        <div className="container">
-          <Link className="navbar-brand" to={"/"}>State LoL</Link>
-          <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
-            <ul className="navbar-nav ml-auto">
-              <li className="nav-item">
-                <Link className="nav-link" to={"/sign-in"}>Sign in</Link>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
+// Layout
+import Header from "./layouts/header";
 
-      <div className="outer">
-        <div className="inner">
+// Pages
+import Home from "./pages/home";
+
+function App() {
+  return (
+    <Router>
+      <Switch>
+        <Route path='/login' component={Login} />
+
+        <Route path='/' exact>
+          <Header />
+
           <Switch>
-            <Route exact path='/' component={Login} />
-            <Route path="/sign-in" component={Login} />
+            <Route path="/" exact component={Home} />
+            <Route path="/home" component={Home} />
           </Switch>
-        </div>
-      </div>
-    </div></Router>
+        </Route>
+
+      </Switch>
+    </Router>
   );
 }
 
