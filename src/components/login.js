@@ -3,31 +3,19 @@ import styled from 'styled-components';
 
 import Input from "./input";
 
-const Outer = styled.div`
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  text-align: left;
-  height: 100%;
-  width: 100%;
-`;
-
 const Inner = styled.div`
-  width: 450px;
-  margin: auto;
   background: #9152f8; /* For old browsers */
   background: linear-gradient(to bottom,#7579ff,#b224ef);  /* For new browsers */
   box-shadow: 0px 14px 80px rgba(34, 35, 58, 0.2);
   padding: 40px 55px 45px 55px;
-  border-radius: 15px;
   transition: all .3s;
 `;
 
 export default class Login extends Component {
   render() {
     return (
-      <Outer>
-        <Inner>
+      <div className="d-flex justify-content-center flex-column text-left h-100 w-100">
+        <Inner className="m-auto border rounded">
           <form>
 
             <h3 className="text-white text-center">LOG IN</h3>
@@ -50,7 +38,7 @@ export default class Login extends Component {
             </p>
           </form>
         </Inner>
-      </Outer>
+      </div>
     );
   }
 }
