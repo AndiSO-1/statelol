@@ -14,7 +14,7 @@ const Inner = styled.div`
 export default class Login extends Component {
   render() {
     return (
-      <div className="d-flex justify-content-center flex-column text-left h-100 w-100">
+      <div id="app" className="d-flex justify-content-center flex-column text-left h-100 w-100">
         <Inner className="m-auto border rounded">
           <form>
 
@@ -31,14 +31,16 @@ export default class Login extends Component {
               </div>
             </div>
             <div className="text-center">
-              <button type="submit" className="btn btn-light px-4 py-2 rounded-pill">Login</button>
+              <button id="btnLogin" type="submit" className="btn btn-light px-4 py-2 rounded-pill">Login</button>
             </div>
             <p className="forgot-password text-center mt-5">
-              <a href="#" className="text-white">Forgot password?</a>
+              <a id="ForgotPassword" href="#" className="text-white">Forgot password?</a>
             </p>
           </form>
         </Inner>
+        <label>test</label>
       </div>
+     
     );
   }
 }
