@@ -20,9 +20,9 @@ export default class Login extends Component {
 
             <h3 className="text-white text-center">LOG IN</h3>
 
-            <Input name="Username" type="text" placeholder="Username" color="white"/>
+            <Input name="Username" type="email" placeholder="Username" color="white" required="required"/>
 
-            <Input name="Password" type="password" placeholder="Password" color="white"/>
+            <Input name="Password" type="password" placeholder="Password" color="white" required="required"/>
 
             <div className="form-group text-white">
               <div className="custom-control custom-checkbox">
@@ -40,7 +40,7 @@ export default class Login extends Component {
         </Inner>
         <label>test</label>
       </div>
-     
+
     );
   }
 }

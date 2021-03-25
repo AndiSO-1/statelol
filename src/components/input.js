@@ -12,7 +12,7 @@ export default class Input extends Component {
     return (
       <div className={this.containerCss}>
         <label>{this.props.name}</label>
-        <input type={this.props.type} className="form-control" placeholder={this.props.placeholder} />
+        <input type={this.props.type} className="form-control" placeholder={this.props.placeholder} required={this.props.required}/>
       </div>
     );
   }

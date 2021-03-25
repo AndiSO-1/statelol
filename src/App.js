@@ -9,6 +9,8 @@ import Header from "./layouts/header";
 
 // Pages
 import Home from "./pages/home";
+import About from "./pages/about";
+import Contact from "./pages/contact";
 
 function App() {
   return (
@@ -16,12 +18,14 @@ function App() {
       <Switch>
         <Route path='/login' component={Login} />
 
-        <Route path='/' exact>
+        <Route path='/'>
           <Header />
 
           <Switch>
             <Route path="/" exact component={Home} />
-            <Route path="/home" component={Home} />
+            <Route path="/home" exact component={Home} />
+            <Route path="/about" exact component={About} />
+            <Route path="/contact" exact component={Contact} />
           </Switch>
         </Route>
 
