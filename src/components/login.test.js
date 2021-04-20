@@ -7,10 +7,12 @@ import Login from './login';
 test('loads login', async() =>{
   render(<Login/>);
   const container = document.getElementById("app");
-  const loginButton = document.getElementById("btnLogin");  
+  const loginButton = document.getElementById("btnLogin");
   const ForgotPassword = document.getElementById("ForgotPassword");
   expect(container).toBeInTheDocument();
   expect(loginButton).toBeInTheDocument();
   expect(ForgotPassword).toBeInTheDocument();
-  
+
+  //oui
+
 });
